@@ -1,0 +1,5 @@
+Cluster c = Cluster.builder().addContactPoint("localhost").build();
+Session s = c.connect();
+s.execute("use pro;");
+ResultSet rs=s.execute("select id,num_href,is_weekend,shares from data_table");
+ResultSet rs2=s.execute("SELECT popularity from data_table");
